@@ -1,0 +1,145 @@
+.drawing-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background: rgba(15, 52, 96, 0.3);
+  border-radius: 8px;
+  border: 1px solid #ff006e;
+}
+
+.drawing-toolbar {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background: rgba(15, 52, 96, 0.5);
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+  flex-wrap: wrap;
+  border: 1px solid #00ffff;
+}
+
+.tool-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.tool-btn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ff006e;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+
+.tool-btn:hover {
+  border-color: #00ffff;
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.tool-btn.active {
+  border-color: #00ffff;
+  background: linear-gradient(135deg, #ff006e 0%, #00ffff 100%);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.action-btn {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background: #f0f0f0;
+  border-color: #999;
+}
+
+.action-btn.save-btn {
+  background: #4CAF50;
+  color: white;
+  border-color: #4CAF50;
+}
+
+.action-btn.save-btn:hover {
+  background: #45a049;
+}
+
+input[type='color'] {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #00ffff;
+  border-radius: 4px;
+  cursor: pointer;
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.size-slider {
+  width: 120px;
+  cursor: pointer;
+  accent-color: #ff006e;
+}
+
+.canvas-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  overflow: auto;
+  max-height: 600px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+  border: 1px solid #00ffff;
+}
+
+.drawing-canvas {
+  cursor: crosshair;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.text-input-popup {
+  display: flex;
+  gap: 8px;
+  background: rgba(15, 52, 96, 0.95);
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  border: 1px solid #00ffff;
+}
+
+.text-input-popup input {
+  padding: 6px 10px;
+  border: 1px solid #00ffff;
+  border-radius: 4px;
+  font-size: 14px;
+  background: rgba(0, 255, 255, 0.05);
+  color: #e0f7ff;
+  font-family: 'Courier New', monospace;
+}
+
+.text-input-popup button {
+  padding: 6px 12px;
+  border: 1px solid #ff006e;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #ff006e 0%, rgba(255, 0, 110, 0.5) 100%);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.text-input-popup button:last-child {
+  background: rgba(100, 100, 100, 0.5);
+  border-color: #888;
+}
