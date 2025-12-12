@@ -61,28 +61,43 @@ function App() {
           {activeFeature === null && (
             <div className="welcome-section">
               <h2>Welcome to PDF Toolkit!</h2>
-              <p>Select a feature from the sidebar to get started.</p>
+              <p>Select a feature from the sidebar or click on a card below to get started.</p>
               <div className="feature-overview">
-                <div className="overview-card">
+                <button
+                  className="overview-card"
+                  onClick={() => setActiveFeature('combine')}
+                >
                   <h3>📎 Combine</h3>
                   <p>Merge multiple PDF files into one</p>
-                </div>
-                <div className="overview-card">
+                </button>
+                <button
+                  className="overview-card"
+                  onClick={() => setActiveFeature('split')}
+                >
                   <h3>✂️ Split</h3>
                   <p>Extract specific pages from a PDF</p>
-                </div>
-                <div className="overview-card">
+                </button>
+                <button
+                  className="overview-card"
+                  onClick={() => setActiveFeature('trim')}
+                >
                   <h3>📏 Trim</h3>
                   <p>Keep only a range of pages</p>
-                </div>
-                <div className="overview-card">
+                </button>
+                <button
+                  className="overview-card"
+                  onClick={() => setActiveFeature('convert')}
+                >
                   <h3>🖼️ Convert</h3>
                   <p>Convert PDF pages to PNG images</p>
-                </div>
-                <div className="overview-card">
+                </button>
+                <button
+                  className="overview-card"
+                  onClick={() => setActiveFeature('edit')}
+                >
                   <h3>✏️ Edit & Draw</h3>
                   <p>Draw, highlight, add text and signatures</p>
-                </div>
+                </button>
               </div>
             </div>
           )}

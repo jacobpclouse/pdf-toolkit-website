@@ -160,11 +160,19 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
   border: 1px solid rgba(0, 255, 255, 0.5);
   font-weight: 600;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  font-size: inherit;
+  margin: 0;
 }
 
 .overview-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 30px rgba(255, 0, 110, 0.4), 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.overview-card:active {
+  transform: translateY(-2px);
 }
 
 .overview-card h3 {
