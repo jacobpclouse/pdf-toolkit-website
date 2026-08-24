@@ -1,18 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import { CombinePDFs } from './components/CombinePDFs';
 import { SplitPDF } from './components/SplitPDF';
 import { TrimPDF } from './components/TrimPDF';
 import { PDFToImages } from './components/PDFToImages';
 import { EditPDF } from './components/EditPDF';
+import Disclaimer from './components/Disclaimer';
 
 type FeatureType = 'combine' | 'split' | 'trim' | 'convert' | 'edit' | null;
 
 function App() {
   const [activeFeature, setActiveFeature] = useState<FeatureType>(null);
+  const [showDisclaimer, setShowDisclaimer] = useState(false);
+
+  useEffect(() => {
+    try {
+      const acknowledged = localStorage.getItem('pdf_toolkit_ack') === 'true';
+      setShowDisclaimer(!acknowledged);
+    } catch (e) {
+      setShowDisclaimer(true);
+    }
+  }, []);
 
   return (
     <div className="app-container">
+      <Disclaimer visible={showDisclaimer} onAccept={() => setShowDisclaimer(false)} />
       <header className="app-header">
         <div className="header-content">
           <h1>📄 PDF Toolkit</h1>

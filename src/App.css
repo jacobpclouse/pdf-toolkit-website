@@ -200,6 +200,73 @@ body {
   margin: 0;
 }
 
+/* Disclaimer modal */
+.disclaimer-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10,14,39,0.7);
+  z-index: 9999;
+  padding: 20px;
+}
+
+.disclaimer-modal {
+  background: linear-gradient(180deg, #07102a 0%, #0f1b3a 100%);
+  color: #e0f7ff;
+  border: 1px solid #ff006e;
+  padding: 24px;
+  border-radius: 10px;
+  max-width: 720px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6), 0 0 20px rgba(255,0,110,0.15);
+}
+
+.disclaimer-modal h2 {
+  color: #00ffff;
+  margin-bottom: 12px;
+}
+
+.disclaimer-modal p {
+  color: #ffbe0b;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.disclaimer-checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #e0f7ff;
+  margin-bottom: 18px;
+}
+
+.disclaimer-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.disclaimer-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-accept {
+  background: linear-gradient(135deg,#ff006e 0%, #00ffff 100%);
+  color: #0a0e27;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-accept:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 @media (max-width: 1024px) {
   .app-content {
     flex-direction: column;
