@@ -2,6 +2,8 @@
 
 A comprehensive, browser-based PDF manipulation tool that allows you to combine, split, trim, edit, and convert PDFs - all without sending any files to a server.
 
+<b>NOTE:</b> This website was created mainly by AI as a simple tool for fun, not a major resume project. Treat it as such.
+
 ## Features
 
 - **📎 Combine PDFs** - Merge multiple PDF files into a single document
